@@ -86,10 +86,10 @@ const morePost = async(url) => {
 }
 
 const categoryPost = async(url) => {
-    const newHTML = await getContent(url)
-    changeUrl(url)
     toggleMenu()
     scrollToTop()
+    const newHTML = await getContent(url)
+    changeUrl(url)
 
     document.head.innerHTML = newHTML.head.innerHTML
     document.querySelector('main').innerHTML = newHTML.querySelector('main').innerHTML
@@ -100,9 +100,9 @@ const categoryPost = async(url) => {
 }
 
 const openPost = async(url) => {
+    scrollToTop()
     const newHTML = await getContent(url)
     changeUrl(url)
-    scrollToTop()
 
     document.head.innerHTML = newHTML.head.innerHTML
     document.querySelector('main').innerHTML = newHTML.querySelector('main').innerHTML
