@@ -86,9 +86,10 @@ const morePost = async(url) => {
 }
 
 const categoryPost = async(url) => {
+    const newHTML = await getContent(url)
+    
     toggleMenu()
     scrollToTop()
-    const newHTML = await getContent(url)
     changeUrl(url)
 
     document.head.innerHTML = newHTML.head.innerHTML
@@ -100,8 +101,9 @@ const categoryPost = async(url) => {
 }
 
 const openPost = async(url) => {
-    scrollToTop()
     const newHTML = await getContent(url)
+    
+    scrollToTop()
     changeUrl(url)
 
     document.head.innerHTML = newHTML.head.innerHTML
