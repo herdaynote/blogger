@@ -106,6 +106,7 @@ const openPost = async(url) => {
 setTimeout(() => {
     const adsScript = document.createElement('script')
     adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+    adsScript.setAttribute('async', 'async')
     adsScript.onerror = () => {
         const adsStyle = document.createElement('style')
         const adsBlock = document.createElement('div')
