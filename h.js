@@ -122,7 +122,7 @@ setTimeout(() => {
         showAds()
     }
     document.head.appendChild(adsScript)
-}, 3000)
+}, 1500)
 
 setInterval(() => {
     parent.location.reload(true)
