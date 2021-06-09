@@ -60,11 +60,7 @@ document.addEventListener('scroll', () => {
 
 const showAds = () => {
     const adsGoogle = document.querySelectorAll('.adsbygoogle')
-    const adsHide = document.querySelectorAll('ins.hide')
-
-    adsHide.forEach((ads) => {
-        ads.classList.remove('hide')
-    })
+    
     adsGoogle.forEach((ads) => {
         (adsbygoogle = window.adsbygoogle || []).push({})
     })
