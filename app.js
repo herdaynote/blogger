@@ -6,6 +6,16 @@ const searchBar = document.querySelector('header form')
 const headerTitle = document.querySelector('header h1')
 const progressBar = document.querySelector('#progress-bar')
 
+document.addEventListener('DOMContentLoaded', () => {
+    let menuCategory = window.location.pathname.split('/')[3]
+
+    menuAnchors.forEach((menuAnchor) => {
+        if (menuAnchor.text.trim() == menuCategory) {
+            menuAnchor.classList.add('menu-active')
+        }
+    })
+})
+
 const handleIntersection = (entries) => {
     entries.map((entry) => {
         if (entry.isIntersecting) {
